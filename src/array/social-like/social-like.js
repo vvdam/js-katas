@@ -8,5 +8,15 @@ Create a function `getLikes` which receives an array of names, and returns:
 */
 
 // TODO add your code here
-
+function getLikes(names) {
+  if (names.length === 0) return "Be the first to like this";
+  else if (names.length === 1) {
+    return names[0] + " likes this";
+  } else if (names.length === 2) {
+    return names[0] + " and " + names[1] + " like this";
+  } else {
+    let length = names.length - 1;
+    return names[0] + " and " + length + " other people like this";
+  }
+}
 module.exports = getLikes;
